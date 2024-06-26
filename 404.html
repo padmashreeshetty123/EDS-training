@@ -44,6 +44,33 @@
     main.error .error-number text {
       font-family: var(--fixed-font-family);
     }
+    .error-message span{
+     animation: disappear 1s forwards;
+    }
+    .error-message span:nth-child(2)
+    {
+      animation-delay: 1s;
+    }
+    .error-message span:nth-child(3)
+    {
+      animation-delay: 2s;
+    }
+    .error-message span:nth-child(4)
+    {
+      animation-delay: 3s;
+    }
+    .error-message span:nth-child(5)
+    {
+      animation-delay: 4s;
+    }
+    @keyframes disappear {
+      0%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
 </head>
@@ -55,7 +82,7 @@
       <svg viewBox="1 0 38 18" class="error-number">
         <text x="0" y="17">404</text>
       </svg>
-      <h2 class="error-message">Page Not Found</h2>
+      <h2 class="error-message"><span>Oopsie!!</span> <span>This</span> <span>page</span> <span>has</span> <span>disappeared</span></h2>
       <p class="button-container">
         <a href="/" class="button secondary error-button-home">Go home</a>
       </p>
