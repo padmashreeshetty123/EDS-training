@@ -8,7 +8,7 @@ async function createForm(formHref) {
 
   const form = document.createElement('form');
   // eslint-disable-next-line prefer-destructuring
-  form.dataset.action = pathname.split('.json')[0];
+  form.dataset.action = pathname.split('.json')[0]+'-response';
 
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
